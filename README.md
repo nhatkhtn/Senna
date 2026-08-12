@@ -20,6 +20,8 @@ https://github.com/user-attachments/assets/3fd172be-d78d-47ae-867d-a473a1e6ddd6
 
 ## News
 
+`[2026-08-11]:` Senna is accepted by IJCV 2026 🎉 !
+
 `[2026-03-16]:` Checkout our new work 🥰, Senna-2 [arXiv](https://arxiv.org/abs/2603.11219) paper released.
 
 `[2024-12-08]:` We have released the code and weight of Senna-VLM, along with the training and evaluation scripts.
