@@ -1,0 +1,32 @@
+[project]
+name = "senna-smoke-test"
+version = "0.1.0"
+description = "Minimal uv env to run one Senna-VLM forward pass (smoke test only, not upstream Senna)"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "torch==2.7.0",
+    "transformers==4.37.2",
+    "accelerate==0.29.2",
+    "tokenizers==0.15.2",
+    "sentencepiece==0.2.0",
+    "pillow==10.3.0",
+    "numpy==1.26.4",
+    "einops==0.6.1",
+    "einops-exts==0.0.4",
+    "protobuf==4.25.3",
+    "requests",
+    "shortuuid",
+    "huggingface_hub[cli]",
+    "safetensors",
+]
+
+[tool.uv]
+# torch/torchvision come from the pytorch cu128 index (Blackwell sm_100 support);
+# everything else resolves from PyPI as usual.
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128" }]
